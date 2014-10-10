@@ -2,12 +2,48 @@
 using namespace std;
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/mman.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
 #include "proj4.h"
+
+struct stringinfo readMap(int fd, int size, int threads){
+  struct stringinfo out;
+  char* file = (char *) mmap(NULL, size, PROT_READ, MAP_SHARED, fd, 0);
+  if (file == (char *) -1){
+    cerr << "Could not map file\n";
+    exit(1);
+  }
+
+  int curstr = 0, maxlen = 0, numstr = 0;
+  for (int i = 0; i < size; i++){
+    char cur = file[i];
+
+    if (isprint(cur) || isspace(cur)){
+      curstr++;
+    }else if (curstr > 3){
+      numstr++;
+      if (curstr > maxlen)
+        maxlen = curstr;
+      curstr = 0;
+    }
+
+  }
+  if (curstr > 0){
+    numstr++;
+    if (curstr > maxlen)
+      maxlen = curstr;
+  }
+
+  out.numstrings = numstr;
+  out.maxlen = maxlen;
+  munmap(file, size);
+  return out;
+}
 
 struct stringinfo readFile (int chunk, int fd){
   struct stringinfo out;
@@ -85,7 +121,7 @@ int main (int argc, char * argv[]){
       cerr << "Invalid input for [size|mmap]\n";
       return 1;
     } else if (chunk == -1){
-      //do mmap
+      out = readMap (fd, inputstat.st_size, 1);
     }else{
       out = readFile(chunk, fd);
     }
