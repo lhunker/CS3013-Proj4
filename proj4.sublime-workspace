@@ -1,0 +1,264 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"va",
+				"value2"
+			],
+			[
+				"my",
+				"myid"
+			],
+			[
+				"pri",
+				"printgrid"
+			],
+			[
+				"thre",
+				"thread"
+			],
+			[
+				"ma",
+				"maxgen"
+			],
+			[
+				"thread",
+				"threads"
+			],
+			[
+				"get",
+				"getNeighbors"
+			],
+			[
+				"row",
+				"rowcount"
+			],
+			[
+				"v",
+				"value1"
+			],
+			[
+				"R",
+				"RecvMsg"
+			],
+			[
+				"work",
+				"worker"
+			],
+			[
+				"send",
+				"SendMsg"
+			],
+			[
+				"ol",
+				"old_sibling"
+			],
+			[
+				"young",
+				"youngest_child"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/lhunker/proj4"
+	],
+	"file_history":
+	[
+		"/home/lhunker/taskstruct",
+		"/usr/src/linux/include/linux/list.h",
+		"/home/lhunker/proj2/phase 2/processinfo.c",
+		"/home/lhunker/proj2/phase 2/processinfo.h",
+		"/home/lhunker/proj2/phase 2/Makefile",
+		"/home/lhunker/proj2/proj2test.c",
+		"/home/lhunker/proj2/Makefile",
+		"/home/lhunker/proj2/processinfo.h",
+		"/home/lhunker/proj2/processinfo.c",
+		"/home/lhunker/proj2/readwrite.c",
+		"/home/lhunker/proj2/syslogexcerpt",
+		"/usr/src/linux/include/asm-generic/cputime.h",
+		"/usr/src/linux/include/linux/jiffies.h",
+		"/usr/src/linux/include/linux/time.h",
+		"/usr/src/linux/include/asm-generic/current.h",
+		"/usr/src/linux/kernel/timer.c",
+		"/usr/src/linux/include/linux/sched.h",
+		"/home/lhunker/cs3013/proj2test.c",
+		"/home/lhunker/cs3013/syslog",
+		"/home/lhunker/cs3013/kernelname",
+		"/home/lhunker/cs3013/syscall_table_32.S",
+		"/home/lhunker/cs3013/unistd_32.h",
+		"/home/lhunker/cs3013/sys.c"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"thread",
+			"threads",
+			"range",
+			"list_empty",
+			"list_for_each",
+			"child",
+			"parent",
+			"cputime_t",
+			"cputtime_t",
+			"jiffies_to_usecs",
+			"time",
+			"pid",
+			"state",
+			"\" ",
+			"pid",
+			"uid",
+			"current_uid",
+			"uid",
+			"pid",
+			"struct task_struct {",
+			"task_struct",
+			"syscall1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "proj4.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": false,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
