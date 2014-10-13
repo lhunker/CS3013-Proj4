@@ -1,3 +1,9 @@
+/*
+Lukas Hunker
+proj4.C
+Takes in a file and a method to read it, then counts te number of strings with length > 3 
+*/
+
 #include <iostream>
 using namespace std;
 #include <sys/types.h>
@@ -13,10 +19,14 @@ using namespace std;
 #include "proj4.h"
 #include "mailboxs.h"
 
-mailboxs * boxs;
-char * filemap;
-int threadNum;
+mailboxs * boxs;  //Mailboxs for interthread communication
+char * filemap; //Where the file is mapped
+int threadNum;  //The umber of threads to use
 
+/*
+ * worker
+ * The worker process for reading multithreaded from a memory map
+*/
 void * worker (void * arg){
   int myId = *(int *) arg;
   delete (int *) arg;
@@ -94,6 +104,16 @@ void * worker (void * arg){
   boxs->SendMsg (0, done);
 }
 
+/*
+ * readMap
+ * Reads the file useing memory mapped IO
+ * Params:
+ *    fd - the file descriptor to read from
+ *    size - the file size
+ *    threads - the number of threads to read with
+ * Returns:
+ *    A structure countaining the number of strings and max string length
+*/
 struct stringinfo readMap(int fd, int size, int threads){
   struct stringinfo out;
   filemap = (char *) mmap(NULL, size, PROT_READ, MAP_SHARED, fd, 0);
@@ -158,6 +178,15 @@ struct stringinfo readMap(int fd, int size, int threads){
   return out;
 }
 
+/*
+ * readFile
+ * Reads the file in chunks using the read system call
+ * Params:
+ *    chunk - the size of chunk to read each time
+ *    fd - the file descriptor to read from
+ * Returns:
+ *    A structure countaining the number of strings and max string length
+*/
 struct stringinfo readFile (int chunk, int fd){
   struct stringinfo out;
   char buf[chunk];

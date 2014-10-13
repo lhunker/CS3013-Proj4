@@ -3,7 +3,7 @@
 #define MAXTHREAD 16
 
 //structs
-struct stringinfo{
+struct stringinfo{	//A structure to hold the information about strings found
   int numstrings;
   int maxlen;
 };
